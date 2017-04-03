@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'active_model_serializers', '0.10.3'
+gem 'dalli'
 
 group :development, :test do
   gem 'byebug'
