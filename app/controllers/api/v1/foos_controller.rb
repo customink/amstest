@@ -4,13 +4,6 @@ module Api
       def index
         @foos = [foo1, foo2]
         render json: @foos
-        # respond_to do |format|
-        #   format.json do
-        #     render json: @foos,
-        #            root: false,
-        #            each_serializer: FooSerializer
-        #   end
-        # end
       end
 
       private
