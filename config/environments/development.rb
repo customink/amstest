@@ -8,6 +8,8 @@ Rails.application.configure do
   # Configure logging
   ActiveSupport::Cache::Store.logger = config.logger
   config.log_level = :debug
+  # otherwise deadlocks can occurr
+  config.middleware.delete 'Rack::Lock'
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
