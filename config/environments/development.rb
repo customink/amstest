@@ -5,6 +5,9 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
   config.action_controller.cache_store = :dalli_store
   config.consider_all_requests_local = false
+  # Configure logging
+  ActiveSupport::Cache::Store.logger = config.logger
+  config.log_level = :debug
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
